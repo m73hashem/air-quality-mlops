@@ -1,0 +1,19 @@
+services:
+  api:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+
+    environment:
+      AIR_MODEL_DIR: /app/models
+      AIR_MODEL_PATH: /app/models/model.pkl
+      AIR_ONNX_MODEL_PATH: /app/models/model.onnx
+
+    volumes:
+      - ../models:/app/models:ro
+
+    ports:
+      - "8000:8000"
+
+    restart: unless-stopped
+    

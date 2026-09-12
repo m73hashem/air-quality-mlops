@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "air-quality-mlops"
+version = "0.1.0"
+description = "MLOps mini project for Beijing air quality prediction"
+requires-python = ">=3.13"
+
+dependencies = [
+    "pandas",
+    "numpy",
+    "scikit-learn",
+    "joblib",
+    "pydantic-settings",
+    "fastapi",
+    "uvicorn",
+    "skl2onnx",
+    "onnxruntime",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-cov",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
