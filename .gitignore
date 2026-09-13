@@ -216,3 +216,14 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Project data
+data/
+
+# Trained models and generated artifacts
+models/
+artifacts/
+
+# Application logs
+logs/
+
